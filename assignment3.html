@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title> Assignment 3 </title>
+	<meta name="Description" content="Assignment 3">
+	<meta name="keywords" content="info keywords">
+	<meta name="author" content="Muhammad Khan">
+	
+<style>
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.header {
+  padding: 80px;
+  text-align: center;
+  background-image: url("/public_html/assets/img/background.jpg"); 
+  color: white;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.header h1 {
+  font-size: 40px;
+}
+.navbar a.right {
+  float: right;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.flex-container {
+  display: flex;
+ }
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 15px;
+}
+.button {
+  background-color: #ddd;
+  border: none;
+  color: red;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome To My Website</h1>
+  <p> This site will talk a little about myself and other HTML related topics</p>
+</div>
+	<section id="home">
+		<div class="navbar">
+			
+			<a href="#Application Form">Application Form</a>
+			<a href="#My Hobbies">My Hobbies</a>
+			<a href="#HTML 5 Form Elements">HTML 5 Form Elements</a>
+			<a href="#5 Minutes Tutorial">5 Minutes Tutorial</a>
+			<a href="#Image Mapping">Image Mapping</a>
+			
+		</div>
+	</section>
+	
+	<section id="Application Form">
+	<div class="main">
+    <h2>Application Form</h2>
+	<form>
+			<table>
+				<tr>
+					<td>
+						Full Name:
+					</td>
+					<td>
+						<input type="text" onfocus="this.value" value="Muhammad Khan">
+					</td>
+					</tr>
+					<tr>
+						<td>
+							Email:
+						</td>
+						<td>
+							<input type="text" onfocus="this.value" value="hurmat123@outlook.com">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Gender:
+						</td>
+						<td>
+							<input type="radio" name="Gender">Male
+							<input type="radio" name="Gender">Female
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Nationality:
+						</td>
+						<td>
+							<select>
+								<option> Canadian </option>
+								<option> American </option>
+								<optioon> British </option>
+								<option> Indian </option>
+								<option> Arabic </option>
+								<option> Chinese </option>
+								<option> Other </option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Upload Resume:
+						</td>
+						<td>
+							<form action="/action_page.php">
+								<input type="file" id="myFile" name="filename">
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="Submit" value="Submit" name="" class="btTxt submit">
+							<input type="Reset" value="Reset" name="" class="btTxt reset">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Skills:
+						</td>
+						<td>
+							MVC <input type="checkbox" id="myCheck" onclick="myFunction()">
+							Asp.Net <input type="checkbox" id="myCheck" onclick="myFunction()">
+							jQuery <input type="checkbox" id="myCheck" onclick="myFunction()">
+							Sql Server <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Post Applying For:
+						</td>
+						<td>
+							<input type="radio" name="Post Applying For">Software Engineer
+							<input type="radio" name="Post Applying For">Team Leader
+							<input type="radio" name="Post Applying For">Project Manager
+							<input type="radio" name="Post Applying For">Trainee
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Paste Your Resume:
+						</td>
+						<td>
+						<textarea id="Paste Your Resume" name="Paste Your Resume" placeholder="Write something.." style="height:100px">
+						</textarea>
+						</td>
+					</tr>
+				</table>
+			</form>
+	</section>
+	
+	<section id="My Hobbies">
+    <h2>My Hobbies</h2>
+	<div class="flex-container">
+		<div>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/t22flliJLTQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			</iframe>
+			<h5> Playing Basketball</h5>
+			<p> Basketball is my favorite sport and I enjoy both watching it and playing it with my friends.</p>
+		</div>
+		<div>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/U6Crs2x6Dx0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			</iframe>
+			<h5> Playing Video Games </h5>
+			<p> I like to play a lot of different video games. This one is one my favorites this year.</p>
+		</div>
+		<div>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/haaRTKm8ePQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			</iframe>
+			<h5> Circuit Building </h5>
+			<p> Using a bread board you're able to make circuits that can accomplish different things.</p>
+		</div>
+	</div>
+	</section>
+	<section id="HTML 5 Form Elements">
+	<h2> HTML 5 Form Elements </h2>
+	<form>
+		<table>
+			<tr>
+				<td>
+					Title:
+				</td>
+				<td>
+					<input type="text" placeholder="Enter Title" name="">
+				</tr>
+				<tr>
+				<td>
+					Name:
+				</td>
+				<td>
+					<input type="text" placeholder="Muhammad Khan" name="">
+				</tr>
+				<tr>
+				<td>
+					Phone Number:
+				</td>
+				<td>
+					<input type="text" placeholder="+1 987654321" name="Number" id="Number">
+				<label for="Number"> (optional)</label>
+				</td>
+				</tr>
+				<tr>
+				<td>
+					Email Address:
+				</td>
+				<td>
+					<input type="text" placeholder="hurmat123@outlook.com" name=""> 
+				</tr>
+				<tr>
+				<td>
+					Your Website:
+				</td>
+				<td>
+					<input type="text" placeholder="www.youtube.com" name="">
+				</tr>
+				<tr>
+				<td>
+					Number of Items to Order:
+				</td>
+				<td>
+					<select>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+					</select>
+				</td>
+				</tr>
+				<tr>
+					<td>
+						Lenth:
+					</td>
+					<td>
+					<input type="range" min="1" max="100" value="10" class="slider" id="Length" name="Length">
+					<label for="Length"> 1m (in 10cm increments)</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Date of Delivery:
+					</td>
+					<td>
+					<input type="" onfocus="this.value" id="Date" value="275760-08-27" name="Date">
+					<label for="Date"> Estimated Delivery Date</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Time of Delivery:
+					</td>
+					<td>
+					<input type="" onfocus="this.value" value="21:00" id="Delivery">
+					<label for="Delivery"> Estimated Delivery Time </label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Colour of Item:
+					</td>
+					<td>
+					<input type="" onfocus="this.value" value="#ed1c24" id="Item">
+					<label for="Item"> (Defaul red) </label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="image" src="/public_html/assets/img/img_snow.jpg"  class="btTxt submit" id="saveForm" height="100" width="100" value="submit" name="" />
+						<button class="button">Reset</button>
+					</td>
+				</tr>
+		</table>
+	</section>
+	
+	<section id="5 Minutes Tutorial">
+	<h2> 5 Minute Tutorial </h2>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9I-iE8R6Tw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+	</iframe>
+	</section>
+	
+	<section id="Image Mapping">
+	<h2> Image Mapping </h2>
+		<img src="/public_html/assets/img/food.jpg" alt="breakfast plate" usemap="#food">
+			<map name="food">
+				<area shape="poly" coords="202,130,226,142,251,147,289,153,317,155,343,151,369,146,382,147,406,140,428,131,440,122,435,110,415,98,398,85,368,77,349,66,328,63,310,64,287,72,262,79,249,81,236,89,226,94,208,106,197,115" alt="croissant" href="https://en.wikipedia.org/wiki/Croissant">
+				<area shape="rect" coords="486,199,625,327" alt="book" href="https://en.wikipedia.org/wiki/Notebook">
+				<area shape="circle" coords="477,73,34" alt="lens" href="https://en.wikipedia.org/wiki/Glasses">
+			</map>
+	
+	</section>
+	</form>
+   </div>
+<script src="https://my.gblearn.com/js/loadscript.js"></script>
+</body>
+</html	>
